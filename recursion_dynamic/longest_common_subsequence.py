@@ -31,6 +31,7 @@ def subproblem(sta,stb,i,j):
         return max(a,b)
 
 '''
+test
 st1 = 'nema'
 st2='emp'
 In [56]: lcs_length(st1,st2)
