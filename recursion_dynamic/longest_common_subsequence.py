@@ -50,23 +50,30 @@ def subproblem_mg(sta,stb,i,j):
             L[i][j] = max(subproblem_mg(sta,stb,i+1,j),subproblem_mg(sta,stb,i,j+1))
     return L[i][j]
 
-def subproblem2(sta,stb,i,j,match):
-    if i == len(sta) or j == len(stb):
-        print('')
-        print('end of string i,j = ',i,j)
-        print('')
-        return match
-    elif sta[i] == stb[j]:
-        print('in equal START i,j = ',i,j)
-        match.append(sta[i])
-        subproblem2(sta,stb,i+1,j+1,match)
-        print('in equal END i,j = ',i,j)
-        return match
-    else:
-        print('in max START i,j = ',i,j)
-        a=subproblem2(sta,stb,i+1,j,match)
-        b=subproblem2(sta,stb,i,j+1,match)
-        return max(a,b)
+def lcs_length_it(sta,stb,L):
+    for i in range(len(sta),-1,-1):
+        for j in range(len(stb),-1,-1):
+            if i == len(sta) or j==len(stb):
+                L[i][j] = 0
+            elif sta[i-1] == stb[j-1]:
+                L[i][j] = 1 + L[i+1][j+1]
+            else:
+                L[i][j] = max(L[i+1][j],L[i][j+1])
+    return L[0][0]
+
+def lcs_subseq(sta,stb,L,sub):
+    i=0
+    j=0
+    while i<len(sta) and j<len(stb):
+        if sta[i]==stb[j]:
+            sub.append(sta[i])
+            i+=1
+            j+=1
+        elif L[i+1][j] >= L[i][j+1]:
+            i+=1
+        else:
+            j+=1
+    return sub
 
 
 def longest_common_substring(s1, s2):
