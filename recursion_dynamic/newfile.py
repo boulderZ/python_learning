@@ -7,3 +7,4 @@
 # add tag/release from github through pull request
 # add yet another tag/release from console pull request
 # test the pre-release again
+# ADD latest test line
