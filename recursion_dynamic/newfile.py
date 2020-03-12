@@ -8,3 +8,4 @@
 # add yet another tag/release from console pull request
 # test the pre-release again
 # ADD latest test line
+# add another test line for create version number
