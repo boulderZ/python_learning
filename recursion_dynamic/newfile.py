@@ -5,8 +5,5 @@
 # this is to test adding tag from command line
 # TESTING1: first add line to newfile.py
 # TESTING2: Add more changes
-# remove structure
-# remove structure again
-# add structure again {A:5, B:6}
-# add new structure {C:7, D:8, E:12}
+# NEW BASE LEVEL
 
