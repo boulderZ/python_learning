@@ -6,4 +6,4 @@
 # TESTING1: first add line to newfile.py
 # TESTING2: Add more changes
 # remove structure
-# add structure {A:5, B:6}
+# add structure {A:5, B:6, C:11}
