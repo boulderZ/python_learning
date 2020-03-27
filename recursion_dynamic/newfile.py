@@ -7,3 +7,4 @@
 # TESTING2: Add more changes
 # NEW BASE LEVEL
 # add structure {A:4, B:3}
+# add structure 2 {C:23, D:24}
