@@ -6,5 +6,4 @@
 # TESTING1: first add line to newfile.py
 # TESTING2: Add more changes
 # NEW BASE LEVEL
-# add structure {A:5, B:6, C:6}
-# add another structure {D:4, E:3, F:21}
+
